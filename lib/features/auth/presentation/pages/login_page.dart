@@ -13,7 +13,7 @@ class LoginPage extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/background.jpg"),
+            image: AssetImage("assets/images/bg2.jpg"),
             opacity: 0.9,
             fit: BoxFit.fill,
           ),
@@ -30,6 +30,7 @@ class LoginPage extends StatelessWidget {
                   fontSize: 50,
                   fontWeight: FontWeight.bold,
                   fontFamily: "OpenSans",
+                  color: Colors.white,
                 ),
               ),
               const SizedBox(height: 30),
@@ -48,6 +49,22 @@ class LoginPage extends StatelessWidget {
                 text: "Log In",
                 onPressed: () => null,
               ),
+              const SizedBox(height: 20),
+              RichText(
+                text: TextSpan(
+                  text: "Don't have an account? ",
+                  style: Theme.of(context).textTheme.titleMedium,
+                  children: [
+                    TextSpan(
+                      text: "Sign Up",
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                            color: Colors.deepPurple,
+                            fontWeight: FontWeight.bold,
+                          ),
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ),
