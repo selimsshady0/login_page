@@ -4,7 +4,7 @@
 
 <p id="description">Fully Functionality Log In, Sign Up Page. Animated UI. Using Clean Architecture and BLoC. Remote Data Base with supabase.</p>
 
-<img src="assets/images/banner.jpg" width="300" height="600" alt="App Screenshot"/> <img src="images/banner.jpg" width="300" height="600" alt="App Screenshot"/> <img src="images/banner.jpg" width="300" height="600" alt="App Screenshot"/>
+<img src="assets/images/screenshot1.png" width="300" height="600" alt="App Screenshot"/> <img src="assets/images/screenshot2.png" width="300" height="600" alt="App Screenshot"/> 
   
   
 <h2>🧐 Features</h2>

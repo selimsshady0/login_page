@@ -57,10 +57,7 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 20),
               GestureDetector(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    SignUpPage.route(),
-                  );
+                  Navigator.push(context, SignUpPage.route());
                 },
                 child: RichText(
                   text: TextSpan(
