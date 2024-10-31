@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:login_page/features/auth/presentation/pages/login_page.dart';
 import 'package:login_page/features/auth/presentation/widgets/auth_field.dart';
@@ -30,55 +31,73 @@ class SignUpPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
-                "Sign Up.",
-                style: TextStyle(
-                  fontSize: 50,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: "OpenSans",
-                  color: Colors.white,
+              FadeInUp(
+                duration: const Duration(milliseconds: 500),
+                child: const Text(
+                  "Sign Up.",
+                  style: TextStyle(
+                    fontSize: 50,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: "OpenSans",
+                    color: Colors.white,
+                  ),
                 ),
               ),
               const SizedBox(height: 30),
-              AuthField(
-                hintText: "Name",
-                controller: nameController,
+              FadeInUp(
+                duration: const Duration(milliseconds: 800),
+                child: AuthField(
+                  hintText: "Name",
+                  controller: nameController,
+                ),
               ),
               const SizedBox(height: 15),
-              AuthField(
-                hintText: "Email",
-                controller: emailController,
+              FadeInUp(
+                duration: const Duration(milliseconds: 850),
+                child: AuthField(
+                  hintText: "Email",
+                  controller: emailController,
+                ),
               ),
               const SizedBox(height: 15),
-              AuthField(
-                hintText: "Password",
-                controller: passwordController,
-                isObscureText: true,
+              FadeInUp(
+                duration: const Duration(milliseconds: 900),
+                child: AuthField(
+                  hintText: "Password",
+                  controller: passwordController,
+                  isObscureText: true,
+                ),
               ),
               const SizedBox(height: 30),
-              AuthGradientButton(
-                text: "Sign Up",
-                onPressed: () => null,
+              FadeInUp(
+                duration: const Duration(milliseconds: 1000),
+                child: AuthGradientButton(
+                  text: "Sign Up",
+                  onPressed: () => null,
+                ),
               ),
               const SizedBox(height: 20),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context, LoginPage.route());
-                },
-                child: RichText(
-                  text: TextSpan(
-                    text: "Already have an account? ",
-                    style: Theme.of(context).textTheme.titleMedium,
-                    children: [
-                      TextSpan(
-                        text: "Log In",
-                        style:
-                            Theme.of(context).textTheme.titleMedium?.copyWith(
-                                  color: Colors.deepPurple,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                      ),
-                    ],
+              FadeInUp(
+                duration: const Duration(milliseconds: 1100),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context, LoginPage.route());
+                  },
+                  child: RichText(
+                    text: TextSpan(
+                      text: "Already have an account? ",
+                      style: Theme.of(context).textTheme.titleMedium,
+                      children: [
+                        TextSpan(
+                          text: "Log In",
+                          style:
+                              Theme.of(context).textTheme.titleMedium?.copyWith(
+                                    color: Colors.deepPurple,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               )
